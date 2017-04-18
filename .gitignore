@@ -1,0 +1,10 @@
+# database connection details
+springpw.php
+
+# unused files
+/mantis/tests
+/mantis/uploads
+/mantis/doc
+/mantis/api
+/mantis/admin
+
