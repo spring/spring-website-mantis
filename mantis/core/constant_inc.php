@@ -21,7 +21,7 @@
 /**
  * Mantis Version
  */
-define( 'MANTIS_VERSION', '1.3.2' );
+define( 'MANTIS_VERSION', '1.3.10' );
 define( 'FILTER_VERSION', 'v9' );
 
 # --- constants -------------------
@@ -499,14 +499,12 @@ define( 'TOKEN_ACCOUNT_VERIFY', 6 );
 define( 'TOKEN_ACCOUNT_ACTIVATION', 7 );
 define( 'TOKEN_USER', 1000 );
 
-# token expirations
+# Token expiry durations (in seconds)
 define( 'TOKEN_EXPIRY', 60 * 60 );
-
-# Default expiration of 60 minutes ( 3600 seconds )
 define( 'TOKEN_EXPIRY_LAST_VISITED', 24 * 60 * 60 );
 define( 'TOKEN_EXPIRY_AUTHENTICATED', 5 * 60 );
 define( 'TOKEN_EXPIRY_COLLAPSE', 365 * 24 * 60 * 60 );
-define( 'TOKEN_EXPIRY_ACCOUNT_ACTIVATION', 24 * 60 * 60 );
+define( 'TOKEN_EXPIRY_ACCOUNT_ACTIVATION', 7 * 24 * 60 * 60 );
 
 # config types
 define( 'CONFIG_TYPE_DEFAULT', 0 );
@@ -618,3 +616,14 @@ define( 'UTF8_BOM', "\xEF\xBB\xBF" );
 # Maximum number of bugs that are treated simutaneously in export procedures,
 # to keep memory usage under control. Do not exceed 1000 if using Oracle DB.
 define( 'EXPORT_BLOCK_SIZE', 500 );
+
+# Maximum "safe" value to be used for integer fields in database.
+# Note: mantis ids are defined in schema as "I UNSIGNED", which Adodb maps to
+# the closest integer (4 bytes) type available. As some DBs dont support unsigned
+# types, 2^31 is a safe limit to be used for all.
+define( 'DB_MAX_INT', 2147483647 );
+
+# Configuration management actions (adm_config_report.php)
+define( 'MANAGE_CONFIG_ACTION_CREATE', 'create' );
+define( 'MANAGE_CONFIG_ACTION_CLONE', 'clone' );
+define( 'MANAGE_CONFIG_ACTION_EDIT', 'edit' );

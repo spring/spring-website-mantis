@@ -112,7 +112,8 @@ if( $f_type_page == 'html' ) {
 } else {
 	echo '<html xmlns:o="urn:schemas-microsoft-com:office:office"
 		xmlns:w="urn:schemas-microsoft-com:office:word"
-		xmlns="http://www.w3.org/TR/REC-html40">';
+		xmlns="http://www.w3.org/TR/REC-html40">
+		<head><meta charset="utf-8"></head>';
 	html_body_begin();
 }
 
@@ -167,8 +168,7 @@ for( $j=0; $j < $t_row_count; $j++ ) {
 
 	if( $j % 50 == 0 ) {
 		# to save ram as report will list data once, clear cache after 50 bugs
-		bug_text_clear_cache();
-		bug_clear_cache();
+		bug_clear_cache_all();
 		bugnote_clear_cache();
 	}
 
