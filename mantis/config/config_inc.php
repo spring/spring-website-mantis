@@ -38,7 +38,7 @@
 	# detailed comments.
 
 	# --- database variables ---------
-	include($_SERVER['DOCUMENT_ROOT'] . '/../springpw.php'); 
+	include(dirname( dirname(__FILE__) ) . '/../springpw.php');
 
 
 	# set these values to match your setup
