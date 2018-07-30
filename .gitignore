@@ -8,3 +8,5 @@ springpw.php
 /mantis/api
 /mantis/admin
 
+# uploads
+/uploads
