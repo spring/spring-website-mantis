@@ -2,11 +2,11 @@
 springpw.php
 
 # unused files
-/mantis/tests
-/mantis/uploads
-/mantis/doc
-/mantis/api
-/mantis/admin
+/mantis-*/tests
+/mantis-*/uploads
+/mantis-*/doc
+/mantis-*/api
+/mantis-*/admin
 
 # uploads
 /uploads
