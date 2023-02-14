@@ -3,7 +3,7 @@ springpw.php
 
 # unused files
 /mantis-*/tests
-/mantis-*/uploads
+/files/uploads
 /mantis-*/doc
 /mantis-*/api
 /mantis-*/admin
